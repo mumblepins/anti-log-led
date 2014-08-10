@@ -1,5 +1,6 @@
 #include "anti-log-led/anti-log-led.h"
 AntiLogLed::RgbLed RGBControl;
+// AntiLogLed::RgbLed RGBControl(false);  // don't do normalization on color values
 bool doLoop = true;
 int n;
 
