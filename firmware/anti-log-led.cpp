@@ -27,7 +27,7 @@ void AntiLogLed::RgbLed::color(uint8_t red, uint8_t green, uint8_t blue) {
         // nothing ??
     } else {
         int maximum=max(red,max(green,blue));
-        float scaleMax=255.0/(float)maximum;
+        scaleMax=255.0/(float)maximum;
     }
     //
     _desRed=scaleMax*_colorScaling[red];

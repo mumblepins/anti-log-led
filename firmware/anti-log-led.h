@@ -23,7 +23,7 @@ namespace AntiLogLed {
         int _brightness,_red,_green,_blue;
         float _desRed, _desGreen, _desBlue;
         int _desBright;
-        bool _normalize
+        bool _normalize;
         void updateLed(void);
     public:
         RgbLed(bool normalize=true);
