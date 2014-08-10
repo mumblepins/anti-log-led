@@ -1,0 +1,7 @@
+{
+  "name": "anti-log-led",
+  "author": "mumblepins <dansull@gmail.com>",
+  "license": "GPL v2",
+  "version": "0.0.1",
+  "description": "A library for the spark core to correct for the nonlinearity in the RGB LED"
+}
