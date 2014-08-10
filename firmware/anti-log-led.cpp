@@ -51,8 +51,6 @@ void AntiLogLed::RgbLed::brightness(uint8_t bright) {
 }
 
 void AntiLogLed::RgbLed::color(uint8_t red, uint8_t green, uint8_t blue) {
-    // scales colors to make largest 255
-    float scaleMax = 1.0;
 
     if ((red == 255) || (green == 255) || (blue = 255) || (!_normalize)) {
         _desRed = _colorScaling[red];
@@ -65,8 +63,12 @@ void AntiLogLed::RgbLed::color(uint8_t red, uint8_t green, uint8_t blue) {
         //
         int scaledRed = round(scaleMax * red);
         int scaledGreen = round(scaleMax * green);
-
         int scaledBlue = round(scaleMax * blue);
+        Serial.print(scaledRed);
+        Serial.print(',');
+        Serial.print(scaledGreen);
+        Serial.print(',');
+        Serial.println(scaledBlue);
         _desRed = _colorScaling[scaledRed];
         _desGreen = _colorScaling[scaledGreen];
         _desBlue = _colorScaling[scaledBlue];
