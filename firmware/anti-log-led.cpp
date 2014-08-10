@@ -52,7 +52,7 @@ void AntiLogLed::RgbLed::brightness(uint8_t bright) {
 
 void AntiLogLed::RgbLed::color(uint8_t red, uint8_t green, uint8_t blue) {
 
-    if ((red == 255) || (green == 255) || (blue = 255) || (!_normalize)) {
+    if ((red == 255) || (green == 255) || (blue == 255) || (!_normalize)) {
         _desRed = _colorScaling[red];
         _desGreen = _colorScaling[green];
         _desBlue = _colorScaling[blue];
