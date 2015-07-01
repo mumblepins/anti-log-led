@@ -69,9 +69,9 @@ void AntiLogLed::RgbLed::color(uint8_t red, uint8_t green, uint8_t blue) {
         Serial.print(scaledGreen);
         Serial.print(',');
         Serial.println(scaledBlue); */
-        _desRed = _colorScaling[round(scaleMax * red)];
-        _desGreen = _colorScaling[round(scaleMax * green)];
-        _desBlue = _colorScaling[round(scaleMax * blue)];
+        _desRed = _colorScaling[(int) round(scaleMax * red)];
+        _desGreen = _colorScaling[(int) round(scaleMax * green)];
+        _desBlue = _colorScaling[(int) round(scaleMax * blue)];
     }
 
     updateLed();
